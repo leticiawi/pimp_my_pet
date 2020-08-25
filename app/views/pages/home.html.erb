@@ -5,9 +5,19 @@
       <h1>Welcome to <strong>Pimp </strong> my <strong> Pet</strong>!</h1>
       <p></p>
       <%= link_to "Shop Now!", "#", class: "btn btn-gradient" %>
-      <%= link_to "Sell Now!", "#", class: "btn btn-gradient" %>
+      <%= link_to "Sell Now!", new_product_path , class: "btn btn-gradient" %>
     </div>
   </div>
+  <%= link_to "View All", products_path %>
+
+  <div class="search">
+    <%= link_to "View All |", "#"%>
+    <%= link_to "Top 5 |", "#"%>
+    <%= link_to "Toys |", "#"%>
+    <%= link_to "Treats |", "#"%>
+    <%= link_to "Beauty", "#"%> 
+  </div>
+        
 
   <div class="container">
     <div class="row">
@@ -16,10 +26,11 @@
           <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
           <div class="card-trip-infos">
             <div>
-              <h2>Title here</h2>
-              <p>Short description here!</p>
+              <h2>Collar fancy</h2>
+              <p>Price: 17$</p>
             </div>
-            <h2 class="card-trip-pricing">£99.99</h2>
+              <%= link_to "View!", "#", class: "btn btn-gradient" %>
+            </div>
         </div>
      </div>
   </div>
