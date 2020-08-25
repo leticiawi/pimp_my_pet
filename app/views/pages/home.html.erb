@@ -5,9 +5,10 @@
       <h1>Welcome to <strong>Pimp </strong> my <strong> Pet</strong>!</h1>
       <p></p>
       <%= link_to "Shop Now!", "#", class: "btn btn-gradient" %>
-      <%= link_to "Sell Now!", "#", class: "btn btn-gradient" %>
+      <%= link_to "Sell Now!", new_product_path , class: "btn btn-gradient" %>
     </div>
   </div>
+  <%= link_to "View All", products_path %>
 
   <div class="search">
     <%= link_to "View All |", "#"%>

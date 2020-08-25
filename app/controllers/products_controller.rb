@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+  #skip_before_action :authenticate_user!, only: :index, :new
+
   def new
     @product = Product.new
   end
@@ -10,10 +12,12 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+    #@selected_products = @products.select { |product| product.category }
   end
 
   def create
     @product = Product.new(product_params)
+    @product.user = current_user
 
     if @product.save
       redirect_to product_path(@product)
@@ -31,7 +35,7 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:name, :email)
+    params.require(:product).permit(:name, :description, :price)
   end
 
 end
