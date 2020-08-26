@@ -49,3 +49,12 @@
   margin-top: 10px;
   text-align: justify;
 }
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  flex-grow: 1;
+}
+
+
