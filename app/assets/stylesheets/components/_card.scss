@@ -6,7 +6,7 @@
   height: 400px;
   width: 320px;
 
-  height: 380px;
+  height: 390px;
   width: 300px;
 
   margin-top: 30px;
@@ -23,7 +23,8 @@
 .card-trip h2 {
   font-size: 20px;
   font-weight: bold;
-  margin-top: -25px;
+  margin-top: -19px;
+  box-shadow: gray;
 }
 
 .card-trip p {
@@ -50,7 +51,7 @@
 }
 
 .card-product {
-  flex: 1 1 auto;
+
   min-height: 1px;
   margin-top: 10px;
   text-align: justify;
@@ -63,4 +64,12 @@
   flex-grow: 1;
 }
 
+.card-button-space {
+  margin-top: 10px;
+  flex-shrink: 2;
+}
 
+#top-5-text {
+  margin-top: 14px;
+
+}
