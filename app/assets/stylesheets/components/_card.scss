@@ -2,8 +2,13 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+  height: 400px;
+  width: 320px;
+
   height: 380px;
   width: 300px;
+
   margin-top: 30px;
   margin-left: 10px;
 
@@ -43,3 +48,19 @@
   margin-top: 10px;
   text-align: justify;
 }
+
+.card-product {
+  flex: 1 1 auto;
+  min-height: 1px;
+  margin-top: 10px;
+  text-align: justify;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  flex-grow: 1;
+}
+
+

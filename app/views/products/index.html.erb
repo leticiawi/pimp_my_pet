@@ -1,1 +1,52 @@
-<h1>Heloo inde</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1516453734593-8d198ae84bcf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80);">
+  <div class="container">
+    <h1>All Products <strong>Index dos products</h1>
+  </div>
+</div>
+
+<div class="search">
+    <%= link_to "Home |", root_path %>
+    <%= link_to "Top 5 |", "#"%>
+    <%= link_to "Toys |", "#"%>
+    <%= link_to "Treats |", "#"%>
+    <%= link_to "Beauty", "#"%>
+</div>
+
+
+  <div class="container">
+    <div class="row">
+      <% @products.each do |product| %>
+      <div class="col-12 col-md-6 col-lg-4">
+        <% if product.photo.attached? %>
+        <div class="card-trip">
+          <img class="card-img-top" src='<%= cl_image_path product.photo.key %>' alt="Card image cap">
+        <% else %>
+          <img class="card-img-top" src="https://images.unsplash.com/photo-1591347887817-173e3d5c4891?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2582&q=80" alt="Card image cap">
+        <% end %>
+          <div class="card-trip-infos">
+            <div>
+              <h2><%= product.name %></h2>
+              <p>Price:<%= product.price %> $</p>
+              <div class="border p-3">
+                <p>Description:</p>
+                <p> "<%= product.description %>"</p>
+              </div>
+                <div>
+                  <%#= link_to "Buy now", products_path, class: "btn btn-flat" %>
+                  <%= link_to "View!", product_path(product), class: "btn btn-gradient" %>
+                  <%= link_to product_path(product), method: :delete, data: { confirm: "Are you sure?" } do %>
+                  <%= " || Remove Product" %>
+                  <% end %>
+                </div>
+            </div>
+              <%#= link_to "View!", product_path(Product.first), class: "btn btn-gradient" %>
+          </div>
+        </div>
+     </div>
+     <% end %>
+  </div>
+</div>
+
+
+
+

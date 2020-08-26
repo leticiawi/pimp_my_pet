@@ -2,10 +2,20 @@
     <div class="container">
       <h1>Welcome to <strong>Pimp </strong> my <strong> Pet</strong>!</h1>
       <p></p>
-      <%= link_to "Shop Now!", "#", class: "btn btn-gradient" %>
+      <%= link_to "Shop Now!", products_path , class: "btn btn-gradient" %>
       <%= link_to "Sell Now!", new_product_path , class: "btn btn-gradient" %>
     </div>
   </div>
+
+
+
+  <div class="search">
+    <%= link_to "View All |", products_path %>
+    <%= link_to "Top 5 |", "#"%>
+    <%= link_to "Toys |", "#"%>
+    <%= link_to "Treats |", "#"%>
+    <%= link_to "Beauty", "#"%>
+
 
   <div class="buttons">
     <%= link_to "View All |", products_path, class: "search" %>
@@ -13,25 +23,64 @@
     <%= link_to "Toys |", "#", class: "search"%>
     <%= link_to "Treats |", "#", class: "search"%>
     <%= link_to "Beauty", "#", class: "search"%> 
+
   </div>
-        
 
   <div class="container">
+
+    <div class>
+    <h2>Top 5 products</h2>
+    </div>
+    <div class="row">
+
     <div class="row mb-5" >
+
       <div class="col-12 col-md-6 col-lg-4">
         <div class="card-trip">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+          <img src="https://images.unsplash.com/photo-1582798358481-d199fb7347bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1268&q=80" />
+          <div class="card-trip-infos">
+            <div>
+              <h2>Collar fancy</h2>
+              <p>Price: 17$</p>
+            </div>
+              <%= link_to "View!", product_path(Product.first), class: "btn btn-gradient" %>
+            </div>
+        </div>
+     </div>
+
+     <div class="col-12 col-md-6 col-lg-4">
+        <div class="card-trip">
+          <img src="https://images.unsplash.com/photo-1582798358481-d199fb7347bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1268&q=80" />
           <div class="card-trip-infos">
             <div class="card-product">
               <h2>Collar fancy</h2>
               <p>Price: 17$</p>
+
+            </div>
+              <%= link_to "View!", product_path(Product.first), class: "btn btn-gradient" %>
+
               <p> Description: <%="esse produto é lindo demais e tem muitas funções que podem ser vistas quando vc".truncate(80) %></p>
               <div class="card-button-space">
               <%= link_to "View!", "#", class: "btn btn-gradient-view" %>
               </div>
+
             </div>
         </div>
      </div>
+
+     <div class="col-12 col-md-6 col-lg-4">
+        <div class="card-trip">
+          <img src="https://images.unsplash.com/photo-1582798358481-d199fb7347bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1268&q=80" />
+          <div class="card-trip-infos">
+            <div>
+              <h2>Collar fancy</h2>
+              <p>Price: 17$</p>
+            </div>
+              <%= link_to "View!", product_path(Product.first), class: "btn btn-gradient" %>
+            </div>
+        </div>
+     </div>
+
   </div>
 </div>
 <div class="footer">

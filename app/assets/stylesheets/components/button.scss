@@ -35,6 +35,7 @@
   border-radius: 40px;
 }
 
+
 .btn-gradient:hover {
   background: linear-gradient(#857D7D, #B2B2B2);
   color: white;
@@ -62,7 +63,26 @@
   font-size: 20px;
 }
 
+
+.search  {
+  color: black
+}
+
+.btn-gradient-view {
+  color: white;
+  padding: 8px 24px;
+  background: #3089DC;
+  border-radius: 40px;
+  margin-top: -4px;
+}
+
+.btn-space {
+padding: 4px;
+
+}
+
 .buttons {
   margin-top: 5px;
   margin-left: 10px;
 }
+
