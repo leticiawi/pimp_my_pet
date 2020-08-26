@@ -4,20 +4,20 @@
     <div class="container">
       <h1>Welcome to <strong>Pimp </strong> my <strong> Pet</strong>!</h1>
       <p></p>
-      <%= link_to "Shop Now!", "#", class: "btn btn-gradient" %>
+      <%= link_to "Shop Now!", products_path , class: "btn btn-gradient" %>
       <%= link_to "Sell Now!", new_product_path , class: "btn btn-gradient" %>
     </div>
   </div>
-  <%= link_to "View All", products_path %>
+
 
   <div class="search">
-    <%= link_to "View All |", "#"%>
+    <%= link_to "View All |", products_path %>
     <%= link_to "Top 5 |", "#"%>
     <%= link_to "Toys |", "#"%>
     <%= link_to "Treats |", "#"%>
-    <%= link_to "Beauty", "#"%> 
+    <%= link_to "Beauty", "#"%>
   </div>
-        
+
 
   <div class="container">
     <div class="row">
@@ -29,7 +29,7 @@
               <h2>Collar fancy</h2>
               <p>Price: 17$</p>
             </div>
-              <%= link_to "View!", "#", class: "btn btn-gradient" %>
+              <%= link_to "View!", product_path(Product.first), class: "btn btn-gradient" %>
             </div>
         </div>
      </div>

@@ -1,0 +1,8 @@
+      <ul class="list-group">
+        <%= simple_form_for @product do |form| %>
+        <li class="list-group-item"><%= form.input :name %></li>
+        <li class="list-group-item"><%= form.input :description %></li>
+        <li class="list-group-item"><%= form.input :price %></li>
+        <%= form.submit class: 'btn btn-info' %>
+        <% end %>
+      </ul>
