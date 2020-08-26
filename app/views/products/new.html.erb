@@ -1,5 +1,5 @@
 
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1514361892635-6b07e31e75f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(https://i.ibb.co/Jv2BGRf/Disen-o-sin-ti-tulo-6.png);">
   <div class="container">
     <h1>Add a new product!</h1>
   </div>
@@ -9,16 +9,8 @@
   <div class="row justify-content-center">
     <div class="col-md-8">
       <h3>Create a new product</h3>
-      <ul class="list-group">
-        <%= simple_form_for @product do |form| %>
-        <li class="list-group-item"><%= form.input :name %></li>
-        <li class="list-group-item"><%= form.input :description %></li>
-        <li class="list-group-item"><%= form.input :price %></li>
-        <li class="list-group-item"><%= form.input :photo, as: :file %></li>
-        <%= form.submit class: 'btn btn-info' %>
-        <% end %>
-      </ul>
-      <%#= render 'shared/form' %>
+
+      <%= render 'shared/form' %>
       </div>
       <%= link_to "Back to all products", products_path %>
   </div>

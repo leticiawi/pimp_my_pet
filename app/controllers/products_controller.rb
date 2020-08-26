@@ -7,9 +7,7 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @user = User.new
-    @product = Product.new
-    @products = Product.find(params[:id])
+    @product = Product.find(params[:id])
   end
 
   def index
