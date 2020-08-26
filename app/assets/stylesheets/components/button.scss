@@ -14,14 +14,15 @@
 
 .btn-flat {
   color: white;
-  padding: 8px 24px;
+  padding: 6px 22px;
   border-radius: 4px;
-  background: #1EDD88;
+  background: #ca3131;
   transition: background 0.3s ease;
+  margin-top: 5px;
 }
 
 .btn-flat:hover {
-  background: #1BCB7F;
+  background: #939795;
   color: white;
 }
 
@@ -64,17 +65,19 @@
 }
 
 
-.search  {
-  color: black
-}
 
 .btn-gradient-view {
   color: white;
   padding: 8px 24px;
-  background: #3089DC;
+  background: #009efa;
   border-radius: 40px;
   margin-top: -4px;
+  box-shadow: 1px 1px 5px gray;
+  &:hover{
+    color: rgb(40, 47, 150);
+  }
 }
+
 
 .btn-space {
 padding: 4px;
@@ -84,5 +87,13 @@ padding: 4px;
 .buttons {
   margin-top: 5px;
   margin-left: 10px;
+}
+
+.btn-gradient-product {
+  color: white;
+  padding: 8px 24px;
+  background: #3089DC;
+  border-radius: 40px;
+  margin-top: 10px;
 }
 

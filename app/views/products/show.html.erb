@@ -3,11 +3,11 @@
 
 <h1><%= @product.name %></h1>
 <div class="search">
-    <%= link_to "View All |", products_path %>
-    <%= link_to "Top 5 |", "#"%>
-    <%= link_to "Toys |", "#"%>
-    <%= link_to "Treats |", "#"%>
-    <%= link_to "Beauty", "#"%>
+    <%= link_to "View All |", products_path, class: "search" %>
+    <%= link_to "Top 5 |", "#", class: "search"%>
+    <%= link_to "Toys |", "#", class: "search"%>
+    <%= link_to "Treats |", "#", class: "search"%>
+    <%= link_to "Beauty", "#", class: "search"%>
   </div>
 
    <div class="col-12 col-md-6 col-lg-4">
