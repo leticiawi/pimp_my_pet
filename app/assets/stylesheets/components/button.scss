@@ -39,10 +39,30 @@
   background: linear-gradient(#857D7D, #B2B2B2);
   color: white;
 }
+
 .btn-gradient #product {
-  color: blue
+  color: rgb(73, 73, 255)
 }
 
-.search  {
-  color: black
+.btn-gradient-view {
+  color: white;
+  padding: 8px 24px;
+  background: #3089DC;
+  border-radius: 40px;
+  margin-top: -4px;
+}
+
+.card-button-space {
+  margin-top: 10px;
+  flex-shrink: 2;
+}
+
+.search {
+  color: black;
+  font-size: 20px;
+}
+
+.buttons {
+  margin-top: 5px;
+  margin-left: 10px;
 }
