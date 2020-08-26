@@ -1,5 +1,7 @@
 
-<h1>Show one product</h1>
+
+
+<h1><%= @product.name %></h1>
 <div class="search">
     <%= link_to "View All |", products_path %>
     <%= link_to "Top 5 |", "#"%>
@@ -24,7 +26,7 @@
              <p> "<%= @product.description %>"</p>
            </div>
              <div>
-               <%= link_to "Buy now", products_path, class: "btn btn-flat" %>
+               <%= link_to "Buy now", new_product_cart_path(@product), class: "btn btn-flat" %>
                <%= link_to product_path(@product), method: :delete, data: { confirm: "Are you sure?" } do %>
                <%= " || Remove Product" %>
                <% end %>
@@ -34,3 +36,6 @@
        </div>
      </div>
   </div>
+
+
+
