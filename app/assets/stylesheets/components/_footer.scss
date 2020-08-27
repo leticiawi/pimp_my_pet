@@ -1,5 +1,5 @@
 .footer {
-  background: #ffffff;
+  background: #d6d6d6;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -8,25 +8,70 @@
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
 }
-.footer-links {
+.social-media {
   display: flex;
   align-items: center;
 }
-.footer-links a {
-  width: 70px;
-  color: rgb(238, 184, 69);
-  opacity: 0.50;
+.social-media #social {
+  display: flex;
+  background: #d6d6d6;
+  width: 45px;
+  height: 45px;
+  margin: 0 15px;
+  border-radius: 5px;
   text-decoration: none;
-  font-size: 24px;
-  padding: 0px 10px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+              -6px -6px 10px -1px rgba(255,255,255,0.7);
+  border: 1px solid rgba(0,0,0,0.0);
+  transition: transform 0.5s;
 }
-.footer-links a:hover {
-  opacity: 1;
+
+#social i {
+font-size: 27px;
+color: #777;
+transition: transform 0.5s;
 }
-.footer .fa-heart {
-  color: #D23333;
+
+#social:hover {
+  box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+              inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+              -0.5px -0.5px 0px  rgba(255,255,255,1),
+              0.5px 0.5px 0px  rgba(0,0,0,0.15),
+              0px 12px 10px -10px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.01);
+
+  transform: translateY(2px);
+}
+
+#social:hover i {
+  transform: scale(0.90);
+}
+
+#social:hover .fa-instagram {
+  color: #f14843;
+}
+
+#social:hover .fa-facebook {
+  color: #3b5998;
+}
+
+#social:hover .fa-twitter {
+  color: #00acee;  
+}
+
+#social:hover .fa-whatsapp {
+  color: #4fce5d;  
+}
+
+.footer .fa-paw {
+  color: #000000;
 }
 
 .footer-copyright {
-  color: rgb(165, 165, 165);
+  font-family: sans-serif;
+  letter-spacing: 3px;
+  font-size: 20px;
+  color: rgb(128, 128, 128);
 }
