@@ -1,4 +1,6 @@
 class CartsController < ApplicationController
+  skip_before_action :authenticate_user!, except: [:new, :create]
+
   def index
     @carts = current_user.carts
   end

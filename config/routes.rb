@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :new, :create, :destroy, :index]
   resources :carts, only: [:destroy, :show, :index]
   resources :products do
-  resources :carts, only: [:create, :new ]
-  resources :orders, only: [:show, :create, :new] do
-    resources :payments, only: :new
+    resources :carts, only: [:create, :new ]
+    resources :orders, only: [:show, :create, :new] do
+      resources :payments, only: :new
     end
   end
 
