@@ -23,6 +23,11 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'cloudinary', '~> 1.12.0'
 
+gem 'money-rails'
+
+gem 'stripe'
+
+gem 'stripe_event'
 
 gem 'dotenv-rails', groups: [:development, :test]
 
