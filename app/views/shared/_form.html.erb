@@ -3,6 +3,7 @@
         <li class="list-group-item"><%= form.input :name %></li>
         <li class="list-group-item"><%= form.input :description %></li>
         <li class="list-group-item"><%= form.input :price_cents %></li>
+        <li class="list-group-item"><%= form.input :category, collection: ["treats", "toys", "beauty"] %></li>
         <li class="list-group-item"><%= form.input :photo, as: :file %></li>
         <%= form.submit class: 'btn btn-info' %>
         <% end %>
