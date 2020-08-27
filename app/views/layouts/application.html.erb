@@ -4,6 +4,12 @@
     <title>PimpMyPet</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <link rel="stylesheet" href="footer.scss">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css
+
+
+
+">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -18,17 +24,16 @@
     <%= yield %>
 
   <div class="footer">
-  <div class="footer-links">
-    <a href="#"><i class="fab fa-github"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
+      <div class="social-media">
+        <a href="#" id="social"><i class="fab fa-instagram"></i></a>
+        <a href="#" id="social"><i class="fab fa-facebook"></i></a>
+        <a href="#" id="social"><i class="fab fa-twitter"></i></a>
+        <a href="#" id="social"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      <div class="footer-copyright">
+        Pimp My Pet, your Pet´s place <i class="fas fa-paw"></i> 
+      </div>
   </div>
-  <div class="footer-copyright">
-    Pimp My Pet, your Pet´s place <i class="fas fa-heart"></i> 
-  </div>
-
   </body>
 </html>
 
