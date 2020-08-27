@@ -64,8 +64,6 @@
   font-size: 20px;
 }
 
-
-
 .btn-gradient-view {
   color: white;
   padding: 8px 24px;
@@ -92,8 +90,51 @@ padding: 4px;
 .btn-gradient-product {
   color: white;
   padding: 8px 24px;
-  background: #3089DC;
+  background: #333333;
   border-radius: 40px;
   margin-top: 10px;
 }
 
+.edit-btn {
+  margin-top: 15px;
+  padding: 6px 25px;
+  border-radius: 4px;
+  background: #e78e19;
+  transition: background 0.3s ease;
+  margin-top: 5px;
+  a{
+    color: white;
+  }
+}
+
+.edit-btn:hover {
+  background: #dac505d2;
+  text-decoration: none;
+  a{
+    color: black;
+  }
+}
+
+.remove-btn {
+  margin-top: 15px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  background: #da0303;
+  transition: background 0.3s ease;
+  margin-top: 5px;
+  a{
+    color: white;
+  }
+}
+
+.remove-btn:hover {
+  background: #ff0000c9;
+  text-decoration: none;
+  a {
+    color: black;
+  }
+}
+
+a:link {
+  text-decoration: none;
+}
