@@ -26,7 +26,7 @@
         <div class="card-trip-infos">
           <div>
             <h2><%= product.name %></h2>
-            <p>Price:<%= product.price %> $</p>
+            <p>Amount: <%= humanized_money_with_symbol(product.price) %></p>
             <div class="border p-3">
               <p>Description:</p>
               <p> "<%= product.description %>"</p>
