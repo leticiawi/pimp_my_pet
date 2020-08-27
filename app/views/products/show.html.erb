@@ -19,23 +19,24 @@
          <div class="card-trip-infos">
            <div>
              <h2><%= @product.name %></h2>
-             <p>Price:<%= @product.price %> $</p>
+             <p>Amount: <%= humanized_money_with_symbol(@product.price) %></p>
              <div class="border p-3">
                <p>Description:</p>
                <p> "<%= @product.description %>"</p>
              </div>
                <div>
                 <% if @product.user != current_user %>
-                  <%= link_to "Buy now", new_product_cart_path(@product), class: "btn btn-flat" %>
-                 <% end %>
-
-                 <% if @product.user == current_user %>
+                   <%= form_tag product_orders_path(@product), method: :post do %>
+                   <%= hidden_field_tag 'product_id', @product.id %>
+                   <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
+                  <% end %>
+                <% end %>
+                <% if @product.user == current_user %>
                    <%= link_to "Edit Product |", edit_product_path(@product) %>
                 <% end %>
-
-                 <% if @product.user == current_user %>
-                   <%= link_to "| Remove Product", product_path(@product), method: :delete, data: { confirm: "Are you sure?" } %>
-                <% end %>
+                <% if @product.user == current_user %>
+                      <%= link_to "| Remove Product", product_path(@product), method: :delete, data: { confirm: "Are you sure?" } %>
+                 <%# end %>
                </div>
            </div>
              <%#= link_to "View!", product_path(@Product.first), class: "btn btn-gradient" %>
