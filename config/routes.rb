@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   resources :carts, only: [:destroy, :show, :index]
   resources :products do
     resources :carts, only: [:create, :new ]
-
   end
 
   root to: 'pages#home'
