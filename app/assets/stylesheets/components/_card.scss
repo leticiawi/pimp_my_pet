@@ -96,3 +96,48 @@
  }
  
 
+ .card-view {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: 420px;
+  width: 350px;
+  margin-top: 30px;
+  margin-bottom: 70px;
+}
+.card-view > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-view h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: -19px;
+  box-shadow: gray;
+}
+.card-view p {
+  font-size: 15px;
+  opacity: .7;
+  margin: 0;
+  padding: 0px;
+}
+
+
+.card-view .card-trip-infos {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.product-name {
+  margin-left: 100px;
+}
+
+#box {
+  width: 310px;
+  height: 100px;
+}
