@@ -30,7 +30,7 @@
                  <% end %>
 
                  <% if @product.user == current_user %>
-                   <%= link_to "Edit Product |", product_path(@product), method: :fhsdis %>
+                   <%= link_to "Edit Product |", edit_product_path(@product) %>
                 <% end %>
 
                  <% if @product.user == current_user %>
