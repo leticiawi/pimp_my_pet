@@ -18,7 +18,7 @@ class ProductsController < ApplicationController
     end
 
     if params[:search] == "toys"
-      @background = "https://images.unsplash.com/photo-1477884143921-51d0a574ee09?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2560&q=80"
+      @background = "https://i.ibb.co/gjn9KpD/banner-toy.jpg"
       @title = "Toys"
     elsif params[:search] == "treats"
       @background = "https://i.ibb.co/H7mWW03/treat-banner-2.jpg"

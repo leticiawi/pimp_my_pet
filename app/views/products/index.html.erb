@@ -1,5 +1,5 @@
 
-<div class="banner" style='background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(<%= @background %>);'>
+<div class="banner" style='background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(<%= @background %>);'>
   <div class="container">
     <h1><%= @title %></h1>
   </div>
@@ -36,7 +36,7 @@
                 <%#= link_to "Buy now", products_path, class: "btn btn-flat" %>
                    <div class="btn view-btn"><%= link_to "View!", product_path(product) %></div>
                  <% if product.user == current_user %>
-                   <div class="btn remove-btn"><%= link_to "Remove Product", product_path(product), method: :delete, data: { confirm: "Are you sure?" } %></div>
+                   <div class="btn remove-btn"><%= link_to "Remove Product", product_path(product), method: :delete, data: { confirm: "Are you sure?" }, remote: true %></div>
                 <% end %>
               </div>
           </div>
