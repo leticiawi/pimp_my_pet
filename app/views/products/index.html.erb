@@ -27,9 +27,9 @@
           <div>
             <h2><%= product.name %></h2>
             <p> Category: <%= product.category %></p>
-            <p>Amount: <%= humanized_money_with_symbol(product.price/100) %></p>
+            <p id="amount">Amount: <%= humanized_money_with_symbol(product.price/100) %></p>
             <div class="border p-1">
-              <p> "<%= product.description %>"</p>
+
 
             </div>
               <div>
