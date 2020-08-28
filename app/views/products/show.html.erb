@@ -1,52 +1,44 @@
-
 <div class="search">
-    <%= link_to "Home" " |", root_path, class: "search-home" %>
-    <%= link_to "Top 5" " |", "#", class: "search-top"%>
-    <%= link_to "Toys" " |", products_path(search: "toys"), class: "search-toys"%>
-    <%= link_to "Treats" " |", products_path(search: "treats"), class: "search-treats"%>
-    <%= link_to "Beauty", products_path(search: "beauty"), class: "search-beauty"%>
+  <%= link_to "Home" " |", root_path, class: "search-home" %>
+  <%= link_to "Top 5" " |", "#", class: "search-top"%>
+  <%= link_to "Toys" " |", products_path(search: "toys"), class: "search-toys"%>
+  <%= link_to "Treats" " |", products_path(search: "treats"), class: "search-treats"%>
+  <%= link_to "Beauty", products_path(search: "beauty"), class: "search-beauty"%>
 </div>
 
 <div class="d-flex justify-content-center adjust-height">
-    <div class="col-12 col-md-6 col-lg-4">
-       <% if @product.photo.attached? %>
-       <div class="product-name">
-       <h1 id="product-name"><%= @product.name %></h1>
-       </div>
-       <div class="card-view">
-         <img class="card-img-top" src='<%= cl_image_path @product.photo.key %>' alt="Card image cap">
-       <% else %>
-         <img class="card-img-top" src="https://images.unsplash.com/photo-1591347887817-173e3d5c4891?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2582&q=80" alt="Card image cap">
-       <% end %>
-         <div class="card-trip-infos">
-           <div>
-             <h2><%= @product.name %></h2>
-             <p>Amount: <%= humanized_money_with_symbol(@product.price) %></p>
-             <div class="border p-3" id="box">
-               <p> "<%= @product.description %>"</p>
-             </div>
-               <div>
-                <%# if @product.user != current_user %>
-                    <%= form_tag product_orders_path(@product) do %>
-                    <%= hidden_field_tag 'product_id', @product.id %>
-									  <%= submit_tag 'Purchase', class: 'btn btn-purchase' %>
-										<% end %>
-									<%# end %>
-									<% if @product.user == current_user %>               
-										<div class="btn edit-btn"> <%= link_to "Edit Product", edit_product_path(@product) %> </div>
-									<% end %>
-									<% if @product.user == current_user %>
-										<div class="btn remove-btn"><%= link_to "Remove Product", product_path(@product), method: :delete, data: { confirm: "Are you sure?" } %></div>
-									<% end %>
-								</div>
-
-               </div>
-           </div>
-             <%#= link_to "View!", product_path(@Product.first), class: "btn btn-gradient" %>
-         </div>
-       </div>
+  <div class="col-12 col-md-6 col-lg-4">
+    <div class="product-name">
+      <h1 id="product-name"><%= @product.name %></h1>
     </div>
+    <div class="card-view">
+      <% if @product.photo.attached? %>
+        <img class="card-img-top" src='<%= cl_image_path @product.photo.key %>' alt="Card image cap">
+      <% else %>
+        <img class="card-img-top" src="https://images.unsplash.com/photo-1591347887817-173e3d5c4891?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2582&q=80" alt="Card image cap">
+      <% end %>
+      <div class="card-trip-infos">
+        <div>
+          <h2><%= @product.name %></h2>
+          <p>Amount: <%= humanized_money_with_symbol(@product.price) %></p>
+          <div class="border p-3" id="box">
+            <p> "<%= @product.description %>"</p>
+          </div>
+          <div>
+            <% if @product.user != current_user %>
+              <%= form_tag product_orders_path(@product) do %>
+                <%= hidden_field_tag 'product_id', @product.id %>
+                <%= submit_tag 'Purchase', class: 'btn btn-purchase' %>
+              <% end %>
+            <% else %>
+              <div class="btn edit-btn"> <%= link_to "Edit Product", edit_product_path(@product) %> </div>
+              <div class="btn remove-btn"><%= link_to "Remove Product", product_path(@product), method: :delete, data: { confirm: "Are you sure?" } %></div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+             <%#= link_to "View!", product_path(@Product.first), class: "btn btn-gradient" %>
 </div>
-
-
-
