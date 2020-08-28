@@ -7,18 +7,14 @@
     </div>
   </div>
 
-  <div class="buttons">
-    <%= link_to "View All |", products_path, class: "search" %>
-    <%= link_to "Top 5 |", "#", class: "search"%>
-    <%= link_to "Toys |", "#", class: "search"%>
-    <%= link_to "Treats |", "#", class: "search"%>
-    <%= link_to "Beauty", "#", class: "search"%>
+  <div class="search">
+    <strong><%= link_to "Home ", root_path, class: "search" %></strong>
+    <%= link_to "| Top 5 | ", "#", class: "search"%>
+    <%= link_to "Toys |", products_path(search: "toys"), class: "search"%>
+    <%= link_to "Treats |", products_path(search: "treats"), class: "search"%>
+    <%= link_to "Beauty", products_path(search: "beauty"), class: "search"%>
+</div>
 
-  </div>
- 
-
-
-     <%#--------------------------------------------Horizontal card---------------------------------------------------------------------%>
     <div class="container">
       <div class="card-product">
         <img src="https://images.unsplash.com/photo-1582798358481-d199fb7347bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1268&q=80" />

@@ -6,8 +6,8 @@
 </div>
 
 <div class="search">
-    <%= link_to "Home |", root_path, class: "search" %>
-    <%= link_to "Top 5 |", "#", class: "search"%>
+    <strong><%= link_to " All ", "#", class: "search"%></strong>
+    <%= link_to "| Home |", root_path, class: "search" %>
     <%= link_to "Toys |", products_path(search: "toys"), class: "search"%>
     <%= link_to "Treats |", products_path(search: "treats"), class: "search"%>
     <%= link_to "Beauty", products_path(search: "beauty"), class: "search"%>
