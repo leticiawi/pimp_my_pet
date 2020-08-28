@@ -27,9 +27,9 @@
              </div>
                <div>
                 <%# if @product.user != current_user %>
-                   <%= form_tag product_orders_path(@product) do %></div>
+                   <%= form_tag product_orders_path(@product) do %>
                    <%= hidden_field_tag 'product_id', @product.id %>
-								<div>
+
 									  <%= submit_tag 'Purchase', class: 'btn btn-purchase' %>
 										<% end %>
 									<%# end %>
