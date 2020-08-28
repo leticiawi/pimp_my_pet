@@ -27,14 +27,13 @@
              </div>
                <div>
                 <%# if @product.user != current_user %>
-
-                   <%= form_tag product_orders_path(@product), method: :post do %></div>
+                   <%= form_tag product_orders_path(@product) do %></div>
                    <%= hidden_field_tag 'product_id', @product.id %>
 								<div>
 									  <%= submit_tag 'Purchase', class: 'btn btn-purchase' %>
 										<% end %>
 									<%# end %>
-									<% if @product.user == current_user %>               
+									<% if @product.user == current_user %>
 										<div class="btn edit-btn"> <%= link_to "Edit Product", edit_product_path(@product) %> </div>
 									<% end %>
 									<% if @product.user == current_user %>
