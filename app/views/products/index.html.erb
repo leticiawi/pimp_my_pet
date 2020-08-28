@@ -5,16 +5,15 @@
   </div>
 </div>
 
-<div class="search">
-    <strong><%= link_to " All ", "#", class: "search"%></strong>
-    <%= link_to "| Home |", root_path, class: "search" %>
-    <%= link_to "Toys |", products_path(search: "toys"), class: "search"%>
-    <%= link_to "Treats |", products_path(search: "treats"), class: "search"%>
-    <%= link_to "Beauty", products_path(search: "beauty"), class: "search"%>
-</div>
 
-
-<div class="container">
+<div class="container adjust-height">
+    <div class="search">
+      <%= link_to "All" " |", products_path, class: "search-all"%>
+      <%= link_to  "Home" " |", root_path, class: "search-home" %>
+      <%= link_to "Toys" " |", products_path(search: "toys"), class: "search-toys"%>
+      <%= link_to "Treats" " |", products_path(search: "treats"), class: "search-treats"%>
+      <%= link_to "Beauty", products_path(search: "beauty"), class: "search-beauty"%>
+    </div>
   <div class="row">
     <% @products.each do |product| %>
     <div class="col-12 col-md-6 col-lg-4">
@@ -30,16 +29,14 @@
             <p> Category: <%= product.category %></p>
             <p>Amount: <%= humanized_money_with_symbol(product.price/100) %></p>
             <div class="border p-1">
-              <p>Description:</p>
               <p> "<%= product.description %>"</p>
 
             </div>
               <div>
                 <%#= link_to "Buy now", products_path, class: "btn btn-flat" %>
-                <%= link_to "View!", product_path(product), class: "btn btn-gradient-product" %>
-
+                   <div class="btn view-btn"><%= link_to "View!", product_path(product) %></div>
                  <% if product.user == current_user %>
-                   <%= link_to " | Remove Product", product_path(product), method: :delete, data: { confirm: "Are you sure?" } %>
+                   <div class="btn remove-btn"><%= link_to "Remove Product", product_path(product), method: :delete, data: { confirm: "Are you sure?" } %></div>
                 <% end %>
               </div>
           </div>

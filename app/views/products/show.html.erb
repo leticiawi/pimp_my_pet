@@ -1,17 +1,17 @@
 
 <div class="search">
-    <%= link_to "Home |", root_path, class: "search" %>
-    <%= link_to "Top 5 |", "#", class: "search"%>
-    <%= link_to "Toys |", products_path(search: "toys"), class: "search"%>
-    <%= link_to "Treats |", products_path(search: "treats"), class: "search"%>
-    <%= link_to "Beauty", products_path(search: "beauty"), class: "search"%>
+    <%= link_to "Home" " |", root_path, class: "search-home" %>
+    <%= link_to "Top 5" " |", "#", class: "search-top"%>
+    <%= link_to "Toys" " |", products_path(search: "toys"), class: "search-toys"%>
+    <%= link_to "Treats" " |", products_path(search: "treats"), class: "search-treats"%>
+    <%= link_to "Beauty", products_path(search: "beauty"), class: "search-beauty"%>
 </div>
 
 <div class="d-flex justify-content-center adjust-height">
     <div class="col-12 col-md-6 col-lg-4">
        <% if @product.photo.attached? %>
        <div class="product-name">
-       <h1><%= @product.name %></h1>
+       <h1 id="product-name"><%= @product.name %></h1>
        </div>
        <div class="card-view">
          <img class="card-img-top" src='<%= cl_image_path @product.photo.key %>' alt="Card image cap">
@@ -31,14 +31,14 @@
                    <%= form_tag product_orders_path(@product), method: :post do %></div>
                    <%= hidden_field_tag 'product_id', @product.id %>
 								<div>
-									  <div id="inset"><%= submit_tag 'Purchase', class: 'btn btn-purchase' %></div>
+									  <%= submit_tag 'Purchase', class: 'btn btn-purchase' %>
 										<% end %>
 									<%# end %>
 									<% if @product.user == current_user %>               
-										<div class="btn edit-btn" id="inset" > <%= link_to "Edit Product", edit_product_path(@product) %> </div>
+										<div class="btn edit-btn"> <%= link_to "Edit Product", edit_product_path(@product) %> </div>
 									<% end %>
 									<% if @product.user == current_user %>
-										<div class="btn remove-btn" id="inset"><%= link_to "Remove Product", product_path(@product), method: :delete, data: { confirm: "Are you sure?" } %></div>
+										<div class="btn remove-btn"><%= link_to "Remove Product", product_path(@product), method: :delete, data: { confirm: "Are you sure?" } %></div>
 									<% end %>
 								</div>
 
