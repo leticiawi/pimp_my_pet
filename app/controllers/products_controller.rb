@@ -32,7 +32,7 @@ class ProductsController < ApplicationController
     end
 
 
-    @products = @products.reject{ |product| product.orders.count.positive? }
+    #@products = @products.reject{ |product| product.orders.count.positive? }
 
   end
 
