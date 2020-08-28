@@ -6,5 +6,6 @@ class User < ApplicationRecord
   has_many :carts
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  validates :email, presence: true
+  validates :email, presence: true, uniqueness: {case_sensitive: false}
+  # insercao de uniqueness em email
 end
