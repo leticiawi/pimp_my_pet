@@ -1,3 +1,4 @@
+
 <div class="search">
     <%= link_to "Home |", root_path, class: "search" %>
     <%= link_to "Top 5 |", "#", class: "search"%>
@@ -26,17 +27,21 @@
              </div>
                <div>
                 <%# if @product.user != current_user %>
-                   <%= form_tag product_orders_path(@product), method: :post do %>
+
+                   <%= form_tag product_orders_path(@product), method: :post do %></div>
                    <%= hidden_field_tag 'product_id', @product.id %>
-                   <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
-                  <% end %>
-                <%# end %>
-                <% if @product.user == current_user %>
-                  <div class="btn edit-btn" > <%= link_to "Edit Product", edit_product_path(@product) %> </div>
-                <% end %>
-                <% if @product.user == current_user %>
-                  <div class="btn remove-btn"><%= link_to "Remove Product", product_path(@product), method: :delete, data: { confirm: "Are you sure?" } %></div>
-                <% end %>
+								<div>
+									  <div id="inset"><%= submit_tag 'Purchase', class: 'btn btn-purchase' %></div>
+										<% end %>
+									<%# end %>
+									<% if @product.user == current_user %>               
+										<div class="btn edit-btn" id="inset" > <%= link_to "Edit Product", edit_product_path(@product) %> </div>
+									<% end %>
+									<% if @product.user == current_user %>
+										<div class="btn remove-btn" id="inset"><%= link_to "Remove Product", product_path(@product), method: :delete, data: { confirm: "Are you sure?" } %></div>
+									<% end %>
+								</div>
+
                </div>
            </div>
              <%#= link_to "View!", product_path(@Product.first), class: "btn btn-gradient" %>
@@ -44,5 +49,6 @@
        </div>
     </div>
 </div>
+
 
 
