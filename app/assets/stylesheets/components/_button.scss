@@ -96,10 +96,10 @@ padding: 4px;
 }
 
 .edit-btn {
-  margin-top: 15px;
+  transition: transform 0.9s;
   padding: 6px 25px;
   border-radius: 4px;
-  background: #e78e19;
+  background: #fc9c0d;
   transition: background 0.3s ease;
   margin-top: 5px;
   a{
@@ -108,18 +108,20 @@ padding: 4px;
 }
 
 .edit-btn:hover {
-  background: #dac505d2;
+  transition: transform 0.7s;
+  background: #e96d07e8;
   text-decoration: none;
+  transform: translateY(2px);
   a{
-    color: black;
+    color: white;
   }
 }
 
 .remove-btn {
-  margin-top: 15px;
+
   padding: 6px 12px;
   border-radius: 4px;
-  background: #da0303;
+  background: #ff2424;
   transition: background 0.3s ease;
   margin-top: 5px;
   a{
@@ -128,13 +130,34 @@ padding: 4px;
 }
 
 .remove-btn:hover {
-  background: #ff0000c9;
+
+  transition: transform 0.7s;
+  background: #cc1010ee;
   text-decoration: none;
+  transform: translateY(2px);
   a {
-    color: black;
+    color: white;
   }
 }
 
 a:link {
   text-decoration: none;
 }
+
+.btn-purchase {
+  margin-top: 15px;
+  background: rgb(24, 174, 233);
+  border-radius: 4px;
+  padding: 8px 118px;
+  color: white;
+}
+
+.btn-purchase:hover {
+  transition: transform 0.7s;
+  background: rgb(38, 134, 212);
+  text-decoration: none;
+  transform: translateY(2px);
+  color: white;
+}
+
+
