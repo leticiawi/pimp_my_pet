@@ -1,63 +1,71 @@
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(https://images.unsplash.com/photo-1536500152107-01ab1422f932?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80);">
-    <div class="container">
-      <h1>Welcome to <strong>Pimp </strong> my <strong> Pet</strong>!</h1>
-      <p></p>
-      <%= link_to "Shop Now!", products_path , class: "btn btn-gradient" %>
-      <%= link_to "Sell Now!", new_product_path , class: "btn btn-gradient" %>
-    </div>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(https://images.unsplash.com/photo-1536500152107-01ab1422f932?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80);">
+  <div class="container">
+    <h1>Welcome to <strong>Pimp </strong> my <strong> Pet</strong>!</h1>
+    <p></p>
+    <%= link_to "Shop Now!", products_path , class: "btn btn-gradient" %>
+    <%= link_to "Sell Now!", new_product_path , class: "btn btn-gradient" %>
   </div>
-
-  <div class="search">
-    <strong><%= link_to "Home ", root_path, class: "search" %></strong>
-    <%= link_to "| Top 5 | ", "#", class: "search"%>
-    <%= link_to "Toys |", products_path(search: "toys"), class: "search"%>
-    <%= link_to "Treats |", products_path(search: "treats"), class: "search"%>
-    <%= link_to "Beauty", products_path(search: "beauty"), class: "search"%>
 </div>
 
+
+
     <div class="container">
+      <div class="search">
+        <%= link_to "Home" " |", root_path, class: "search-home" %>
+        <%= link_to "Top 5" " |", "#", class: "search-top"%>
+        <%= link_to "Toys" " |", products_path(search: "toys"), class: "search-toys"%>
+        <%= link_to "Treats" " |", products_path(search: "treats"), class: "search-treats"%>
+        <%= link_to "Beauty", products_path(search: "beauty"), class: "search-beauty"%>
+      </div>
       <div class="card-product">
-        <img src="https://images.unsplash.com/photo-1582798358481-d199fb7347bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1268&q=80" />
+        <img src="https://images.unsplash.com/photo-1585849847053-9943f9a2e521?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" />
         <div class="card-product-infos">
-          <h2>Product name</h2>
-          <p>Product description with <strong>relevant info</strong> only.</p>
+          <h2 id="top-five">TREAT</h2>
+          <div><i class="fas fa-bone" id="bone-color"></i><i class="fas fa-bone" id="bone-color"></i><i class="fas fa-bone" id="bone-color"></i><i class="fas fa-bone"></i><i class="fas fa-bone"></i></div>
+          <p id="top-five-info">This treat is the <strong>most wanted<strong> of the week, click and check it out !!</p>
+          <p id="product-description"> This treats are natural and tasty! The raw material is organic and super healthy for your pet, I guarantee he will not get fat!</p>
+        </div>
+      </div>
+ 
+      <div class="card-product">
+        <img src="https://images.unsplash.com/photo-1598134025798-bfb6540ca748?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1955&q=80" />
+        <div class="card-product-infos">
+          <h2 id="top-five">FREESBIE</h2>
+          <div><i class="fas fa-bone" id="bone-color"></i><i class="fas fa-bone" id="bone-color"></i><i class="fas fa-bone" id="bone-color"></i></i><i class="fas fa-bone" id="bone-color"></i><i class="fas fa-bone"></i></div>
+          <p id="top-five-info">This toy is the <strong>most wanted<strong> of the week, click and check it out !!</p>
+          <p id="product-description"> This freesbie is cute and light, and is the best toy for when you are in the park with your dog, see the best models.</p>
         </div>
       </div>
 
-      <div class="card-product">
-        <img src="https://images.unsplash.com/photo-1582798358481-d199fb7347bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1268&q=80" />
+            <div class="card-product">
+        <img src="https://images.unsplash.com/photo-1516386408840-d718a820a05c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" />
         <div class="card-product-infos">
-          <h2>Product name</h2>
-          <p>Product description with <strong>relevant info</strong> only.</p>
+          <h2 id="top-five">SHAMPOO</h2>
+          <div><i class="fas fa-bone" id="bone-color"></i><i class="fas fa-bone" id="bone-color"></i><i class="fas fa-bone" id="bone-color"></i></i><i class="fas fa-bone" id="bone-color"></i><i class="fas fa-bone"></i></div>
+          <p id="top-five-info">This shampoo is the <strong>most wanted<strong> of the week, click and check it out !!</p>
+          <p id="product-description"> This shampoo leaves the hair soft and silky, the best to leave your pet pimped.</p>
         </div>
       </div>
 
-      <div class="card-product">
-        <img src="https://images.unsplash.com/photo-1582798358481-d199fb7347bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1268&q=80" />
+            <div class="card-product">
+        <img src="https://images.unsplash.com/photo-1594713110068-373988a737e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" />
         <div class="card-product-infos">
-          <h2>Product name</h2>
-          <p>Product description with <strong>relevant info</strong> only.</p>
+          <h2 id="top-five">BALL</h2>
+          <div><i class="fas fa-bone" id="bone-color"></i><i class="fas fa-bone" id="bone-color"></i><i class="fas fa-bone" id="bone-color"></i></i><i class="fas fa-bone" id="bone-color"></i><i class="fas fa-bone"></i></div>
+          <p id="top-five-info">This toy is the <strong>most wanted<strong> of the week, click and check it out !!</p>
+          <p id="product-description">This ball will be your pet's best friend when he is alone, choose from several models and sizes! you will love!</p>
         </div>
       </div>
 
-      <div class="card-product">
-        <img src="https://images.unsplash.com/photo-1582798358481-d199fb7347bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1268&q=80" />
+            <div class="card-product">
+        <img src="https://images.unsplash.com/photo-1520811607976-6d7812b0ecac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" />
         <div class="card-product-infos">
-          <h2>Product name</h2>
-          <p>Product description with <strong>relevant info</strong> only.</p>
-        </div>
-      </div>
-
-      <div class="card-product">
-        <img src="https://images.unsplash.com/photo-1582798358481-d199fb7347bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1268&q=80" />
-        <div class="card-product-infos">
-          <h2>Product name</h2>
-          <p>Product description with <strong>relevant info</strong> only.</p>
+          <h2 id="top-five">RATION</h2>
+          <div><i class="fas fa-bone" id="bone-color"></i><i class="fas fa-bone" id="bone-color"></i><i class="fas fa-bone" id="bone-color"></i></i><i class="fas fa-bone" id="bone-color"></i></i><i class="fas fa-bone" id="bone-color"></i></div>
+          <p id="top-five-info">This ration is the <strong>most wanted<strong> of the week, click and check it out !!</p>
+          <p id="product-description"> This feed is the most recommended by veterinarians! Assists in weight regulation and oral health, come and see!</p>
         </div>
       </div>
     </div>
-</div>
 
-
-
-
+      
