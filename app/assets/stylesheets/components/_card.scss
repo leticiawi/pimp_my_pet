@@ -33,7 +33,7 @@
 }
 
 .card-trip:hover {
-  transform: translateY(5px);
+  transform: translateX(5px);
   transition: transform 0.5s;
   box-shadow: 3px 3px 7px rgb(77, 77, 77);
 }
@@ -87,7 +87,7 @@
 }
 
 .card-product:hover {
-  transform: translateY(4px);
+  transform: translateX(4px);
   transition: transform 0.5s;
   box-shadow: 3px 3px 7px rgb(77, 77, 77);
 }
@@ -148,6 +148,12 @@
   padding: 0px;
 }
 
+.card-view:hover {
+  transform: translateX(5px);
+  transition: transform 0.5s;
+  box-shadow: 3px 3px 7px rgb(77, 77, 77);
+}
+
 
 .card-view .card-trip-infos {
   padding: 20px;
@@ -206,6 +212,8 @@
 .border {
   border: 0px solid #dee2e6 !important;
 }
+
+
 
 
 

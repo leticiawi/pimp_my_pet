@@ -73,111 +73,112 @@
 .search{
   text-decoration: none;
   margin-top: 20px;
+  
 }
 
 .search-all {
   margin-left: 5px;
   margin-top: 5px;
-  color: black;
   font-size: 20px;
-}
-
-.search-all:hover {
-  font-weight: bold;
-  text-shadow: -2px 2px 4px rgba(0, 0, 0, 0.25);
   a: {
     color: black;
   }
 }
 
+.search-all:hover {
+  font-weight: bold;
+  text-shadow: -2px 2px 4px rgba(0, 0, 0, 0.25);
+  color: black;
+}
+
 .search-top {
   margin-left: 5px;
   margin-top: 5px;
-  color: black;
   font-size: 20px;
+  a: {
+    color: black;
+  }
 }
 
 .search-top:hover {
   font-weight: bold;
   text-shadow: -2px 2px 4px rgba(0, 0, 0, 0.25);
-  a{
-    color: black;
-  }
+  color: black;
 }
 
 .search-home{
   margin-left: 5px;
   margin-top: 5px;
-  color: black;
   font-size: 20px;
+  a: {
+    color: black;
+  }
 }
 
 .search-home:hover {
   font-weight: bold;
   text-shadow: -2px 2px 4px rgba(0, 0, 0, 0.25);
-  a{
-    color: black;
-  }
+  color: black;
 }
 
 .search-treats {
   margin-left: 5px;
   margin-top: 5px;
-  color: black;
   font-size: 20px;
+  a: {
+    color: black;
+  }
 }
 
 .search-treats:hover {
   font-weight: bold;
   text-shadow: -2px 2px 4px rgba(0, 0, 0, 0.25);
-  a{
-    color: black;
-  }
+  color: black;
 }
 
 .search-toys {
   margin-left: 5px;
   margin-top: 5px;
-  color: black;
   font-size: 20px;
+  a: {
+    color: black;
+  }
 }
 
 .search-toys:hover {
   font-weight: bold;
   text-shadow: -2px 2px 4px rgba(0, 0, 0, 0.25);
-  a{
-    color: black;
-  }
+  color: black;
 }
 
 .search-beauty {
   margin-left: 5px;
   margin-top: 5px;
-  color: black;
   font-size: 20px;
+  a: {
+    color: black;
+  }
 }
 
 .search-beauty:hover {
   font-weight: bold;
   text-shadow: -2px 2px 4px rgba(0, 0, 0, 0.25);
-  a{
-    color: black;
-  }
+  color: black;
 }
 
 .search-top-5 {
   margin-left: 5px;
   margin-top: 5px;
-  color: black;
   font-size: 20px;
+  a: {
+    color: black;
+  }
 }
 
 .search-top-5:hover {
   font-weight: bold;
   text-shadow: -2px 2px 4px rgba(0, 0, 0, 0.25);
-  a{
-    color: black;
-  }
+  color: black;
 }
 
 
@@ -322,8 +323,8 @@ a {
 }
 
 .fa-home{
-  margin-top: 5px;
+  margin-top: 10px;
   margin-right: 20px;
-  font-size:35px;
+  font-size:40px;
   color: rgb(59, 59, 59);
 }
